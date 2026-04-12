@@ -50,7 +50,7 @@ nav a:hover {
 }
 
 .card {
-    background:white;
+    background:pink;
     padding:20px;
     margin:10px;
     box-shadow:0 0 10px gray;
@@ -59,7 +59,7 @@ nav a:hover {
 /* FOOTER */
 footer {
     background:#003366;
-    color:white;
+    color:pink;
     padding:10px;
     text-align:center;
 }
@@ -83,7 +83,20 @@ footer {
 </nav>
 
 <div class="slider">
-<img src="poster.jpg">
+<div class="slider">
+<img id="slide" src="poster.jpg">
+</div>
+
+<script>
+let images = ["poster.jpg","poster2.jpg","poster3.jpg"];
+let i = 0;
+
+setInterval(function(){
+    i++;
+    if(i >= images.length) i = 0;
+    document.getElementById("slide").src = images[i];
+}, 2000);
+</script>
 </div>
 
 <div class="section">
